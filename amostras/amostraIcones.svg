@@ -1,0 +1,260 @@
+<!-- apresenta os pictogramas nos temas claro e escuro -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="760" viewBox="0 0 1000 760"><rect width="500" height="760" fill="#fafbf9"/><rect x="500" width="500" height="760" fill="#101411"/><text x="32" y="34" font-family="sans-serif" font-size="17" fill="#1c2925">Tema claro</text><g transform="translate(42 75) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 27V17l-2-2a1.5 1.5 0 0 1 2-2l1 1V11a1.4 1.4 0 0 1 2.8 0 1.4 1.4 0 0 1 2.8 0v8l-2 3v5" fill="#ad7556"/>
+    <path d="M3 24h7v6H3Z" fill="#83a7b4"/>
+    <path d="M13 23v-5l-4-4a2.2 2.2 0 0 1 3-3l1 1V7a2 2 0 0 1 4 0 2 2 0 0 1 4 0 2 2 0 0 1 4 0v7c0 4-2 6-4 8v1Z" fill="#dca87f"/>
+    <path d="M17 8v5m4-5v5m-8-1 3 3a3 3 0 0 1 0 4"/>
+    <path d="M12 23h11v7H12Z" fill="#89b598"/>
+    <path d="m5 6-2-2m26 8 2-1M27 3l-1 2" stroke="#cf876a"/>
+  </g></g><text x="72" y="156" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">revolta</text><g transform="translate(161 75) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m5 3 5 2 15 18-3 3L5 8Z" fill="#dce8eb"/>
+    <path d="m27 3-5 2L7 23l3 3L27 8Z" fill="#83a7b4"/>
+    <path d="m3 23 6 6m14 0 6-6" stroke="#e5bd70" stroke-width="3"/>
+    <path d="m4 28-2 2m26-2 2 2" stroke-width="2.4"/>
+  </g></g><text x="191" y="156" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">espadas</text><g transform="translate(280 75) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m4 10 7 5 5-10 5 10 7-5-3 14H7Z" fill="#e5bd70"/>
+    <path d="M8 21h16v6H8Z" fill="#89b598"/>
+    <circle cx="4" cy="8" r="2" fill="#f5e6bd"/>
+    <circle cx="16" cy="3.5" r="2" fill="#f5e6bd"/>
+    <circle cx="28" cy="8" r="2" fill="#f5e6bd"/>
+    <circle cx="16" cy="24" r="1.5" fill="#cf876a" stroke="none"/>
+  </g></g><text x="310" y="156" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">coroa</text><g transform="translate(399 75) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 28V4"/>
+    <path d="M7 5c6-4 11 4 18 0v13c-7 4-12-4-18 0Z" fill="#89b598"/>
+    <path d="M7 5c3-2 6-1 9 0v13c-3-1-6-2-9 0Z" fill="#dbeadc" stroke="none"/>
+    <path d="M7 5c6-4 11 4 18 0v13c-7 4-12-4-18 0ZM4 28h7"/>
+    <circle cx="7" cy="3.5" r="1.5" fill="#e5bd70"/>
+  </g></g><text x="429" y="156" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">bandeira</text><g transform="translate(42 186) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 3H7a2 2 0 0 0-2 2v23a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V9Z" fill="#fffdf8"/>
+    <path d="M21 3v6h6" fill="#dbeadc"/>
+    <path d="M10 12h11m-11 4h11m-11 4h6"/>
+    <path d="m20 26-1 4 3-1 3 1-1-4" fill="#f0d7c6"/>
+    <circle cx="22" cy="24" r="3" fill="#cf876a"/>
+  </g></g><text x="72" y="267" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">documento</text><g transform="translate(161 186) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="13" cy="8" r="5" fill="#ad7556"/>
+    <path d="M4 29v-9a9 9 0 0 1 18 0v9Z" fill="#89b598"/>
+    <path d="M20 16c8 0 11 8 6 13-6 1-12-2-13-7 0-3 3-6 7-6Z" fill="#f5e6bd"/>
+    <circle cx="23" cy="17" r="3.5" fill="#efc7a1"/>
+    <path d="M16 23q4-3 10 1"/>
+  </g></g><text x="191" y="267" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">familia</text><g transform="translate(280 186) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="13" cy="9" r="5" fill="#dca87f"/>
+    <path d="M8 9V7a5 5 0 0 1 10 0v2l-3-4-4 4Z" fill="#dce8eb"/>
+    <path d="M6 30v-9a7 7 0 0 1 14 0v9Z" fill="#89b598"/>
+    <path d="M10 23v7m6-7v7M20 22h6m-3 8V18a3 3 0 0 1 6 0"/>
+    <path d="M11 11h1m3 0h1" stroke-width="1.8"/>
+  </g></g><text x="310" y="267" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">idoso</text><g transform="translate(399 186) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m12 7 2-2a6 6 0 0 1 8 9l-2 2" fill="none" stroke="#83a7b4" stroke-width="4"/>
+    <path d="m12 16-2 2a6 6 0 0 0 8 9l2-2" fill="none" stroke="#cf876a" stroke-width="4"/>
+    <path d="m12 7 2-2a6 6 0 0 1 8 9l-2 2M12 16l-2 2a6 6 0 0 0 8 9l2-2"/>
+    <path d="m4 10 4 2M6 4l3 4m14 14 4 2m-4-7h5" stroke="#e5bd70" stroke-width="1.8"/>
+  </g></g><text x="429" y="267" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">corrente</text><g transform="translate(42 297) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m3 11 8-3 10 3 8-3v20l-8 3-10-3-8 3Z" fill="#fffdf8"/>
+    <path d="m3 20 8-4 10 5 8-4v11l-8 3-10-3-8 3Z" fill="#dbeadc"/>
+    <path d="M11 16v12m10-7v10M16 16V6"/>
+    <path d="M16 10C9 11 7 6 8 3c6-1 9 2 8 7Zm0-4c0-4 4-5 8-4-1 4-4 6-8 4Z" fill="#89b598"/>
+  </g></g><text x="72" y="378" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">territorio</text><g transform="translate(161 297) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 29V8"/>
+    <path d="M15 13C5 14 3 8 4 5c7-1 12 2 11 8Zm2-5c0-6 6-8 11-6 0 6-6 10-11 6Z" fill="#89b598"/>
+    <ellipse cx="11" cy="21" rx="5" ry="6" transform="rotate(-25 11 21)" fill="#cf876a"/>
+    <ellipse cx="22" cy="19" rx="5" ry="6" transform="rotate(25 22 19)" fill="#f0d7c6"/>
+    <path d="M10 16c4 4-2 6 1 10m12-12c-4 4 2 6-1 10"/>
+  </g></g><text x="191" y="378" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">cafe</text><g transform="translate(280 297) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 5V2h8v3" fill="#e5bd70"/>
+    <rect x="7" y="5" width="18" height="20" rx="4" fill="#89b598"/>
+    <path d="M10 9h12v7H10Z" fill="#dce8eb"/>
+    <path d="M16 9v7M10 25l-4 5m16-5 4 5M8 28h16"/>
+    <circle cx="11" cy="21" r="2" fill="#f5e6bd"/>
+    <circle cx="21" cy="21" r="2" fill="#f5e6bd"/>
+  </g></g><text x="310" y="378" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">trem</text><g transform="translate(399 297) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="4" width="21" height="25" rx="2" fill="#89b598"/>
+    <path d="M8 4v25m2-3h17"/>
+    <path d="M17 9v12m-4 2h8M12 12h10" stroke="#f5e6bd"/>
+    <path d="m12 13-3 5h6Zm10 0-3 5h6Z" fill="#e5bd70"/>
+  </g></g><text x="429" y="378" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">justica</text><g transform="translate(42 408) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="7" cy="10" r="3.5" fill="#ad7556"/>
+    <circle cx="25" cy="10" r="3.5" fill="#efc7a1"/>
+    <path d="M2 27v-7a5 5 0 0 1 10 0v7Zm18 0v-7a5 5 0 0 1 10 0v7Z" fill="#83a7b4"/>
+    <circle cx="16" cy="7" r="4.5" fill="#dca87f"/>
+    <path d="M9 28v-7a7 7 0 0 1 14 0v7Z" fill="#89b598"/>
+    <path d="M13 24v4m6-4v4"/>
+  </g></g><text x="72" y="489" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">pessoas</text><g transform="translate(161 408) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 17h24v13H4Z" fill="#dbeadc"/>
+    <path d="m4 17 4-6h16l4 6Z" fill="#89b598"/>
+    <path d="M11 17h10"/>
+    <path d="m11 2 12 4-4 12-12-4Z" fill="#fffdf8"/>
+    <path d="m12 9 2 3 5-4" stroke="#89b598" stroke-width="2"/>
+  </g></g><text x="191" y="489" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">voto</text><g transform="translate(280 408) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h23v24a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" fill="#fffdf8"/>
+    <path d="M27 11h3v17a2 2 0 0 1-3 2" fill="#dbeadc"/>
+    <path d="M8 8h15" stroke="#cf876a" stroke-width="2.4"/>
+    <path d="M8 13h7v8H8Z" fill="#dce8eb"/>
+    <path d="M19 13h4m-4 4h4m-4 4h4M8 25h15"/>
+  </g></g><text x="310" y="489" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">jornal</text><g transform="translate(399 408) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 2v7m-3-4h6"/>
+    <path d="M4 19h24v11H4Z" fill="#f5e6bd"/>
+    <path d="M9 15h14v15H9Z" fill="#fffdf8"/>
+    <path d="m6 16 10-9 10 9Z" fill="#89b598"/>
+    <path d="M13 30v-7a3 3 0 0 1 6 0v7" fill="#cf876a"/>
+    <circle cx="16" cy="17" r="2" fill="#e5bd70"/>
+  </g></g><text x="429" y="489" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">igreja</text><g transform="translate(42 519) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="22" cy="8" r="5" fill="#e5bd70"/>
+    <path d="M22 1V0m7 8h2M15 3l-2-1M29 2l-2 2" stroke="#cf876a"/>
+    <path d="M2 21q8-5 15 0t13 0v9H2Z" fill="#f0d7c6"/>
+    <path d="m16 20-3 4 4 3-2 3m-2-6-6 1m10 2 6-2M7 20v-8m0 3-3-3m3 5 4-3"/>
+  </g></g><text x="72" y="600" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">seca</text><g transform="translate(161 519) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 7C12 3 6 3 3 5v23c5-2 9-1 13 1 4-2 8-3 13-1V5c-4-2-9-2-13 2Z" fill="#fffdf8"/>
+    <path d="M3 5v23c5-2 9-1 13 1V7C12 3 6 3 3 5Z" fill="#dbeadc"/>
+    <path d="M16 7v22M7 11l5 1m-5 5 5 1m8-6 5-1m-5 7 5-1"/>
+    <path d="M20 5v8l2-2 2 2V4" fill="#cf876a"/>
+  </g></g><text x="191" y="600" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">livro</text><g transform="translate(280 519) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 20V3m0 1 10 13H15Z" fill="#fffdf8"/>
+    <path d="M13 7v10H5Z" fill="#dbeadc"/>
+    <path d="M3 21h26l-5 7H8Z" fill="#cf876a"/>
+    <path d="M2 30q4-3 8 0t8 0 8 0" stroke="#83a7b4"/>
+    <path d="M6 24h18"/>
+  </g></g><text x="310" y="600" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">navio</text><g transform="translate(399 519) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 5v21m-8 2h16"/>
+    <path d="M6 9h20" stroke="#e5bd70" stroke-width="2.4"/>
+    <circle cx="16" cy="5" r="2" fill="#e5bd70"/>
+    <path d="m7 10-4 8h8Zm18 0-4 8h8Z" fill="#dbeadc"/>
+    <path d="M3 18q4 6 8 0m10 0q4 6 8 0" fill="#89b598"/>
+    <path d="M12 25h8l2 3H10Z" fill="#e5bd70"/>
+  </g></g><text x="429" y="600" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">balanca</text><g transform="translate(42 630) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 27V15"/>
+    <path d="M16 18C5 19 2 11 4 6c8-1 14 4 12 12Z" fill="#dbeadc"/>
+    <path d="M16 15C15 5 24 2 28 4c1 8-4 13-12 11Z" fill="#89b598"/>
+    <path d="m8 10 8 8m0-3 8-7M11 28h10"/>
+  </g></g><text x="72" y="711" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">folha</text><g transform="translate(161 630) scale(1.85)"><g fill="none" stroke="#375648" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="16" cy="16" r="7" fill="#e5bd70"/>
+    <circle cx="14" cy="14" r="3" fill="#f5e6bd" stroke="none"/>
+    <path d="M16 2v3m0 22v3M2 16h3m22 0h3M6 6l2 2m16 16 2 2M6 26l2-2M24 8l2-2" stroke="#cf876a" stroke-width="1.8"/>
+  </g></g><text x="191" y="711" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#6c7671">sol</text><text x="532" y="34" font-family="sans-serif" font-size="17" fill="#edf2ed">Tema escuro</text><g transform="translate(542 75) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 27V17l-2-2a1.5 1.5 0 0 1 2-2l1 1V11a1.4 1.4 0 0 1 2.8 0 1.4 1.4 0 0 1 2.8 0v8l-2 3v5" fill="#a67657"/>
+    <path d="M3 24h7v6H3Z" fill="#79a0ad"/>
+    <path d="M13 23v-5l-4-4a2.2 2.2 0 0 1 3-3l1 1V7a2 2 0 0 1 4 0 2 2 0 0 1 4 0 2 2 0 0 1 4 0v7c0 4-2 6-4 8v1Z" fill="#ce9f7a"/>
+    <path d="M17 8v5m4-5v5m-8-1 3 3a3 3 0 0 1 0 4"/>
+    <path d="M12 23h11v7H12Z" fill="#638f71"/>
+    <path d="m5 6-2-2m26 8 2-1M27 3l-1 2" stroke="#cd9276"/>
+  </g></g><text x="572" y="156" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">revolta</text><g transform="translate(661 75) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m5 3 5 2 15 18-3 3L5 8Z" fill="#354e57"/>
+    <path d="m27 3-5 2L7 23l3 3L27 8Z" fill="#79a0ad"/>
+    <path d="m3 23 6 6m14 0 6-6" stroke="#d3ac65" stroke-width="3"/>
+    <path d="m4 28-2 2m26-2 2 2" stroke-width="2.4"/>
+  </g></g><text x="691" y="156" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">espadas</text><g transform="translate(780 75) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m4 10 7 5 5-10 5 10 7-5-3 14H7Z" fill="#d3ac65"/>
+    <path d="M8 21h16v6H8Z" fill="#638f71"/>
+    <circle cx="4" cy="8" r="2" fill="#66563a"/>
+    <circle cx="16" cy="3.5" r="2" fill="#66563a"/>
+    <circle cx="28" cy="8" r="2" fill="#66563a"/>
+    <circle cx="16" cy="24" r="1.5" fill="#cd9276" stroke="none"/>
+  </g></g><text x="810" y="156" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">coroa</text><g transform="translate(899 75) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M7 28V4"/>
+    <path d="M7 5c6-4 11 4 18 0v13c-7 4-12-4-18 0Z" fill="#638f71"/>
+    <path d="M7 5c3-2 6-1 9 0v13c-3-1-6-2-9 0Z" fill="#304b39" stroke="none"/>
+    <path d="M7 5c6-4 11 4 18 0v13c-7 4-12-4-18 0ZM4 28h7"/>
+    <circle cx="7" cy="3.5" r="1.5" fill="#d3ac65"/>
+  </g></g><text x="929" y="156" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">bandeira</text><g transform="translate(542 186) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 3H7a2 2 0 0 0-2 2v23a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V9Z" fill="#26352c"/>
+    <path d="M21 3v6h6" fill="#304b39"/>
+    <path d="M10 12h11m-11 4h11m-11 4h6"/>
+    <path d="m20 26-1 4 3-1 3 1-1-4" fill="#705246"/>
+    <circle cx="22" cy="24" r="3" fill="#cd9276"/>
+  </g></g><text x="572" y="267" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">documento</text><g transform="translate(661 186) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="13" cy="8" r="5" fill="#a67657"/>
+    <path d="M4 29v-9a9 9 0 0 1 18 0v9Z" fill="#638f71"/>
+    <path d="M20 16c8 0 11 8 6 13-6 1-12-2-13-7 0-3 3-6 7-6Z" fill="#66563a"/>
+    <circle cx="23" cy="17" r="3.5" fill="#e2b991"/>
+    <path d="M16 23q4-3 10 1"/>
+  </g></g><text x="691" y="267" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">familia</text><g transform="translate(780 186) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="13" cy="9" r="5" fill="#ce9f7a"/>
+    <path d="M8 9V7a5 5 0 0 1 10 0v2l-3-4-4 4Z" fill="#354e57"/>
+    <path d="M6 30v-9a7 7 0 0 1 14 0v9Z" fill="#638f71"/>
+    <path d="M10 23v7m6-7v7M20 22h6m-3 8V18a3 3 0 0 1 6 0"/>
+    <path d="M11 11h1m3 0h1" stroke-width="1.8"/>
+  </g></g><text x="810" y="267" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">idoso</text><g transform="translate(899 186) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m12 7 2-2a6 6 0 0 1 8 9l-2 2" fill="none" stroke="#79a0ad" stroke-width="4"/>
+    <path d="m12 16-2 2a6 6 0 0 0 8 9l2-2" fill="none" stroke="#cd9276" stroke-width="4"/>
+    <path d="m12 7 2-2a6 6 0 0 1 8 9l-2 2M12 16l-2 2a6 6 0 0 0 8 9l2-2"/>
+    <path d="m4 10 4 2M6 4l3 4m14 14 4 2m-4-7h5" stroke="#d3ac65" stroke-width="1.8"/>
+  </g></g><text x="929" y="267" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">corrente</text><g transform="translate(542 297) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m3 11 8-3 10 3 8-3v20l-8 3-10-3-8 3Z" fill="#26352c"/>
+    <path d="m3 20 8-4 10 5 8-4v11l-8 3-10-3-8 3Z" fill="#304b39"/>
+    <path d="M11 16v12m10-7v10M16 16V6"/>
+    <path d="M16 10C9 11 7 6 8 3c6-1 9 2 8 7Zm0-4c0-4 4-5 8-4-1 4-4 6-8 4Z" fill="#638f71"/>
+  </g></g><text x="572" y="378" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">territorio</text><g transform="translate(661 297) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 29V8"/>
+    <path d="M15 13C5 14 3 8 4 5c7-1 12 2 11 8Zm2-5c0-6 6-8 11-6 0 6-6 10-11 6Z" fill="#638f71"/>
+    <ellipse cx="11" cy="21" rx="5" ry="6" transform="rotate(-25 11 21)" fill="#cd9276"/>
+    <ellipse cx="22" cy="19" rx="5" ry="6" transform="rotate(25 22 19)" fill="#705246"/>
+    <path d="M10 16c4 4-2 6 1 10m12-12c-4 4 2 6-1 10"/>
+  </g></g><text x="691" y="378" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">cafe</text><g transform="translate(780 297) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 5V2h8v3" fill="#d3ac65"/>
+    <rect x="7" y="5" width="18" height="20" rx="4" fill="#638f71"/>
+    <path d="M10 9h12v7H10Z" fill="#354e57"/>
+    <path d="M16 9v7M10 25l-4 5m16-5 4 5M8 28h16"/>
+    <circle cx="11" cy="21" r="2" fill="#66563a"/>
+    <circle cx="21" cy="21" r="2" fill="#66563a"/>
+  </g></g><text x="810" y="378" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">trem</text><g transform="translate(899 297) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="4" y="4" width="21" height="25" rx="2" fill="#638f71"/>
+    <path d="M8 4v25m2-3h17"/>
+    <path d="M17 9v12m-4 2h8M12 12h10" stroke="#66563a"/>
+    <path d="m12 13-3 5h6Zm10 0-3 5h6Z" fill="#d3ac65"/>
+  </g></g><text x="929" y="378" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">justica</text><g transform="translate(542 408) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="7" cy="10" r="3.5" fill="#a67657"/>
+    <circle cx="25" cy="10" r="3.5" fill="#e2b991"/>
+    <path d="M2 27v-7a5 5 0 0 1 10 0v7Zm18 0v-7a5 5 0 0 1 10 0v7Z" fill="#79a0ad"/>
+    <circle cx="16" cy="7" r="4.5" fill="#ce9f7a"/>
+    <path d="M9 28v-7a7 7 0 0 1 14 0v7Z" fill="#638f71"/>
+    <path d="M13 24v4m6-4v4"/>
+  </g></g><text x="572" y="489" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">pessoas</text><g transform="translate(661 408) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 17h24v13H4Z" fill="#304b39"/>
+    <path d="m4 17 4-6h16l4 6Z" fill="#638f71"/>
+    <path d="M11 17h10"/>
+    <path d="m11 2 12 4-4 12-12-4Z" fill="#26352c"/>
+    <path d="m12 9 2 3 5-4" stroke="#638f71" stroke-width="2"/>
+  </g></g><text x="691" y="489" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">voto</text><g transform="translate(780 408) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 4h23v24a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" fill="#26352c"/>
+    <path d="M27 11h3v17a2 2 0 0 1-3 2" fill="#304b39"/>
+    <path d="M8 8h15" stroke="#cd9276" stroke-width="2.4"/>
+    <path d="M8 13h7v8H8Z" fill="#354e57"/>
+    <path d="M19 13h4m-4 4h4m-4 4h4M8 25h15"/>
+  </g></g><text x="810" y="489" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">jornal</text><g transform="translate(899 408) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 2v7m-3-4h6"/>
+    <path d="M4 19h24v11H4Z" fill="#66563a"/>
+    <path d="M9 15h14v15H9Z" fill="#26352c"/>
+    <path d="m6 16 10-9 10 9Z" fill="#638f71"/>
+    <path d="M13 30v-7a3 3 0 0 1 6 0v7" fill="#cd9276"/>
+    <circle cx="16" cy="17" r="2" fill="#d3ac65"/>
+  </g></g><text x="929" y="489" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">igreja</text><g transform="translate(542 519) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="22" cy="8" r="5" fill="#d3ac65"/>
+    <path d="M22 1V0m7 8h2M15 3l-2-1M29 2l-2 2" stroke="#cd9276"/>
+    <path d="M2 21q8-5 15 0t13 0v9H2Z" fill="#705246"/>
+    <path d="m16 20-3 4 4 3-2 3m-2-6-6 1m10 2 6-2M7 20v-8m0 3-3-3m3 5 4-3"/>
+  </g></g><text x="572" y="600" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">seca</text><g transform="translate(661 519) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 7C12 3 6 3 3 5v23c5-2 9-1 13 1 4-2 8-3 13-1V5c-4-2-9-2-13 2Z" fill="#26352c"/>
+    <path d="M3 5v23c5-2 9-1 13 1V7C12 3 6 3 3 5Z" fill="#304b39"/>
+    <path d="M16 7v22M7 11l5 1m-5 5 5 1m8-6 5-1m-5 7 5-1"/>
+    <path d="M20 5v8l2-2 2 2V4" fill="#cd9276"/>
+  </g></g><text x="691" y="600" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">livro</text><g transform="translate(780 519) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 20V3m0 1 10 13H15Z" fill="#26352c"/>
+    <path d="M13 7v10H5Z" fill="#304b39"/>
+    <path d="M3 21h26l-5 7H8Z" fill="#cd9276"/>
+    <path d="M2 30q4-3 8 0t8 0 8 0" stroke="#79a0ad"/>
+    <path d="M6 24h18"/>
+  </g></g><text x="810" y="600" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">navio</text><g transform="translate(899 519) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 5v21m-8 2h16"/>
+    <path d="M6 9h20" stroke="#d3ac65" stroke-width="2.4"/>
+    <circle cx="16" cy="5" r="2" fill="#d3ac65"/>
+    <path d="m7 10-4 8h8Zm18 0-4 8h8Z" fill="#304b39"/>
+    <path d="M3 18q4 6 8 0m10 0q4 6 8 0" fill="#638f71"/>
+    <path d="M12 25h8l2 3H10Z" fill="#d3ac65"/>
+  </g></g><text x="929" y="600" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">balanca</text><g transform="translate(542 630) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 27V15"/>
+    <path d="M16 18C5 19 2 11 4 6c8-1 14 4 12 12Z" fill="#304b39"/>
+    <path d="M16 15C15 5 24 2 28 4c1 8-4 13-12 11Z" fill="#638f71"/>
+    <path d="m8 10 8 8m0-3 8-7M11 28h10"/>
+  </g></g><text x="572" y="711" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">folha</text><g transform="translate(661 630) scale(1.85)"><g fill="none" stroke="#b6ccb9" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="16" cy="16" r="7" fill="#d3ac65"/>
+    <circle cx="14" cy="14" r="3" fill="#66563a" stroke="none"/>
+    <path d="M16 2v3m0 22v3M2 16h3m22 0h3M6 6l2 2m16 16 2 2M6 26l2-2M24 8l2-2" stroke="#cd9276" stroke-width="1.8"/>
+  </g></g><text x="691" y="711" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#acb7af">sol</text></svg>
