@@ -1,0 +1,13 @@
+{
+  "name": "brasil-imperio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node servidor.mjs",
+    "build": "node gerarSite.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

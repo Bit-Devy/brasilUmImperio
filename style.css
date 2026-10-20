@@ -1,0 +1,1970 @@
+/* define as cores os pictogramas e as fontes do tema claro */
+:root {
+  --fundoPagina:#fafbf9;
+  --fundoElevado:#fff;
+  --textoPrincipal:#1c2925;
+  --textoSuave:#6c7671;
+  --verdePrincipal:#225746;
+  --linhaSeparadora:#dce2dc;
+  --fundoAcao:#225746;
+  --textoAcao:#fff;
+  --fundoAcaoRealcada:#153f31;
+  --corFundoLeitura:250 251 249;
+  --contornoIcone:#375648;
+  --verdeIcone:#89b598;
+  --verdeIconeClaro:#dbeadc;
+  --douradoIcone:#e5bd70;
+  --douradoIconeClaro:#f5e6bd;
+  --terracotaIcone:#cf876a;
+  --terracotaIconeClara:#f0d7c6;
+  --azulIcone:#83a7b4;
+  --azulIconeClaro:#dce8eb;
+  --papelIcone:#fffdf8;
+  --peleIcone:#dca87f;
+  --peleIconeClara:#efc7a1;
+  --peleIconeEscura:#ad7556;
+  --fonteSerifada:Georgia,'Times New Roman',serif;
+  --fonteSemSerifa:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+  color-scheme:light
+}
+/* ajusta a paleta do tema escuro mantendo os detalhes verdes */
+:root[data-tema="escuro"] {
+  --fundoPagina:#101411;
+  --fundoElevado:#171d18;
+  --textoPrincipal:#edf2ed;
+  --textoSuave:#acb7af;
+  --verdePrincipal:#96c5a6;
+  --linhaSeparadora:#334039;
+  --fundoAcao:#96c5a6;
+  --textoAcao:#101c14;
+  --fundoAcaoRealcada:#b4dac0;
+  --corFundoLeitura:16 20 17;
+  --contornoIcone:#b6ccb9;
+  --verdeIcone:#638f71;
+  --verdeIconeClaro:#304b39;
+  --douradoIcone:#d3ac65;
+  --douradoIconeClaro:#66563a;
+  --terracotaIcone:#cd9276;
+  --terracotaIconeClara:#705246;
+  --azulIcone:#79a0ad;
+  --azulIconeClaro:#354e57;
+  --papelIcone:#26352c;
+  --peleIcone:#ce9f7a;
+  --peleIconeClara:#e2b991;
+  --peleIconeEscura:#a67657;
+  color-scheme:dark
+}
+/* inclui bordas e preenchimentos nas medidas dos elementos */
+* {
+  box-sizing:border-box
+}
+/* aplica a tipografia e as cores principais da página */
+html {
+  font-family:var(--fonteSemSerifa);
+  color:var(--textoPrincipal);
+  background:var(--fundoPagina);
+  font-size:16px;
+  -webkit-font-smoothing:antialiased
+}
+/* remove a margem padrão da página */
+body {
+  margin:0
+}
+/* remove o destaque de toque padrão dos controles */
+button,input,a {
+  -webkit-tap-highlight-color:transparent
+}
+/* padroniza os botões e mantém uma área de toque confortável */
+button {
+  font:inherit;
+  color:inherit;
+  cursor:pointer;
+  border:0;
+  background:none;
+  padding:0
+}
+/* indica que o botão está indisponível */
+button:disabled {
+  cursor:default
+}
+/* destaca o controle selecionado durante a navegação por teclado */
+button:focus-visible,a:focus-visible,input:focus-visible,[role=button]:focus-visible {
+  outline:2px solid var(--verdePrincipal);
+  outline-offset:7px
+}
+/* define a cor e a posição do sublinhado dos links */
+a {
+  color:var(--verdePrincipal);
+  text-underline-offset:4px
+}
+/* permite interação direta por toque nos botões e links */
+button,a {
+  touch-action:manipulation
+}
+/* padroniza os botões e mantém uma área de toque confortável */
+button {
+  min-height:44px
+}
+/* oculta os elementos marcados como indisponíveis na etapa atual */
+[hidden] {
+  display:none!important
+}
+/* mantém o texto acessível aos leitores de tela sem ocupar espaço visual */
+.apenasLeitorTela {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0
+}
+/* mostra o atalho para o conteúdo quando ele recebe foco */
+.atalhoConteudo {
+  position:fixed;
+  top:-100px;
+  left:20px;
+  background:var(--fundoElevado);
+  z-index:100;
+  padding:15px
+}
+/* ajusta a apresentação de atalho conteudo durante a navegação por teclado */
+.atalhoConteudo:focus {
+  top:15px
+}
+/* delimita a área da experiência e mantém o tabuleiro dentro da página */
+.aplicacao {
+  min-height:780px;
+  height:100svh;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate
+}
+/* organiza o cabeçalho acima das telas e do tabuleiro */
+.cabecalhoSite {
+  height:100px;
+  position:relative;
+  z-index:5;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin:0 5.6%;
+  border-bottom:1px solid var(--linhaSeparadora)
+}
+/* alinha o símbolo e o nome da marca no cabeçalho */
+.marcaSite {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  font-size:13px;
+  font-weight:650;
+  letter-spacing:.11em
+}
+/* preserva o tamanho e a cor verde do símbolo da marca */
+.simboloMarca {
+  width:28px;
+  height:28px;
+  flex-shrink:0;
+  color:var(--verdePrincipal);
+  overflow:visible
+}
+/* ajusta a apresentação de cabecalho esquerdo */
+.cabecalhoEsquerdo {
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-width:0
+}
+/* ajusta a apresentação de botao voltar abertura */
+.botaoVoltarAbertura {
+  display:grid;
+  place-items:center;
+  width:40px;
+  border-radius:50%;
+  color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de botao voltar abertura ao passar o cursor */
+.botaoVoltarAbertura:hover {
+  background:#edf2e9
+}
+/* ajusta a apresentação de cabecalho direito */
+.cabecalhoDireito {
+  display:flex;
+  gap:46px;
+  align-items:center
+}
+/* ajusta a apresentação de periodo cabecalho */
+.periodoCabecalho {
+  font-size:14px;
+  font-variant-numeric:tabular-nums;
+  color:var(--textoSuave);
+  letter-spacing:.07em
+}
+/* ajusta a apresentação de botao texto */
+.botaoTexto {
+  font-size:14px;
+  color:#505e56
+}
+/* ajusta a apresentação de botao texto */
+.botaoTexto span {
+  margin-left:10px;
+  color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de botao texto ao passar o cursor */
+.botaoTexto:hover {
+  color:var(--verdePrincipal)
+}
+/* reserva o espaço abaixo do cabeçalho para a abertura e o percurso */
+main {
+  position:absolute;
+  inset:100px 0 0
+}
+/* ajusta a apresentação de sobretitulo */
+.sobretitulo {
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.15em;
+  color:var(--verdePrincipal);
+  line-height:1.5
+}
+/* sobrepõe a apresentação ao mapa sem bloquear os controles */
+.apresentacao {
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+  transition:opacity .45s,transform .6s
+}
+/* posiciona os textos principais da apresentação */
+.textoAbertura {
+  position:absolute;
+  top:15%;
+  left:9%;
+  max-width:620px;
+  pointer-events:none
+}
+/* posiciona os textos principais da apresentação */
+.textoAbertura button {
+  pointer-events:auto
+}
+/* posiciona os textos principais da apresentação */
+.textoAbertura .sobretitulo {
+  display:flex;
+  align-items:center;
+  gap:13px
+}
+/* ajusta a apresentação de linha fina */
+.linhaFina {
+  height:1px;
+  width:31px;
+  background:var(--verdePrincipal)
+}
+/* define o destaque tipográfico do título da abertura */
+h1 {
+  font-size:clamp(72px,7.7vw,116px);
+  font-weight:450;
+  line-height:1.03;
+  letter-spacing:-.075em;
+  margin:30px 0 27px
+}
+/* define o destaque tipográfico do título da abertura */
+h1 span {
+  font-family:var(--fonteSerifada);
+  font-style:italic;
+  font-weight:400;
+  color:var(--verdePrincipal);
+  letter-spacing:-.07em
+}
+/* define o ritmo de leitura da descrição inicial */
+.descricaoAbertura {
+  font-size:18px;
+  line-height:1.7;
+  color:#637069;
+  letter-spacing:-.025em;
+  margin-bottom:33px
+}
+/* destaca o início do percurso com a forma arredondada e a cor verde */
+.botaoIniciarPercurso {
+  background:var(--fundoAcao);
+  color:var(--textoAcao);
+  border-radius:999px;
+  padding:17px 22px;
+  display:flex;
+  align-items:center;
+  gap:28px;
+  font-size:15px;
+  font-weight:500;
+  transition:background .2s,transform .2s
+}
+/* ajusta a apresentação de botao iniciar percurso ao passar o cursor */
+.botaoIniciarPercurso:hover {
+  background:var(--fundoAcaoRealcada);
+  transform:translateY(-2px)
+}
+/* ajusta a apresentação de icone botao */
+.iconeBotao {
+  font-size:21px;
+  font-weight:300
+}
+/* apresenta a orientação de navegação abaixo do botão inicial */
+.instrucaoAbertura {
+  font-size:12px;
+  color:var(--textoSuave);
+  margin-top:18px
+}
+/* ajusta a apresentação de extremos abertura */
+.extremosAbertura {
+  position:absolute;
+  bottom:8.5%;
+  left:9%;
+  display:flex;
+  align-items:center;
+  gap:28px;
+  color:var(--textoSuave)
+}
+/* ajusta a apresentação de extremos abertura */
+.extremosAbertura span:not(.linhaExtremos) {
+  display:flex;
+  flex-direction:column;
+  font-size:12px;
+  gap:8px
+}
+/* ajusta a apresentação de extremos abertura */
+.extremosAbertura strong {
+  font-size:21px;
+  font-weight:400;
+  letter-spacing:-.02em;
+  color:var(--textoPrincipal)
+}
+/* ajusta a apresentação de linha extremos */
+.linhaExtremos {
+  height:1px;
+  width:88px;
+  background:#cbd4cd
+}
+/* ajusta a apresentação de legenda abertura */
+.legendaAbertura {
+  position:absolute;
+  right:8.5%;
+  bottom:8%;
+  font-size:13px;
+  color:var(--textoSuave);
+  line-height:1.7
+}
+/* ajusta a apresentação de iniciando percurso */
+.iniciandoPercurso .apresentacao {
+  opacity:0;
+  transform:translateY(-15px);
+  pointer-events:none
+}
+/* ajusta a apresentação de iniciando percurso */
+.iniciandoPercurso .textoAbertura {
+  pointer-events:none
+}
+/* recorta o mapa na abertura e prepara a expansão do percurso */
+.areaTabuleiro {
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  z-index:1;
+  clip-path:inset(0 0 0 45%);
+  transition:clip-path 1.35s cubic-bezier(.2,.7,.2,1);
+  touch-action:pan-y
+}
+/* ajusta a apresentação de botao iniciar mapa */
+.botaoIniciarMapa {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:2;
+  cursor:pointer
+}
+/* ajusta a apresentação de botao iniciar mapa durante a navegação por teclado */
+.botaoIniciarMapa:focus-visible {
+  outline:none
+}
+/* ajusta a apresentação de botao iniciar mapa durante a navegação por teclado */
+.botaoIniciarMapa:focus-visible ~ .legendaTabuleiro {
+  color:var(--verdePrincipal);
+  text-decoration:underline;
+  text-underline-offset:6px
+}
+/* alinha os ícones e o texto do controle de tema */
+.botaoAlternarTema {
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  min-height:36px;
+  font-size:12px;
+  color:var(--textoSuave);
+  border-bottom:1px solid transparent
+}
+/* alinha os ícones e o texto do controle de tema */
+.botaoAlternarTema svg {
+  color:var(--verdePrincipal);
+  flex-shrink:0
+}
+/* ajusta a apresentação de botao alternar tema ao passar o cursor */
+.botaoAlternarTema:hover {
+  color:var(--verdePrincipal);
+  border-color:var(--linhaSeparadora)
+}
+/* inclina o mapa na abertura e anima sua rotação ao iniciar */
+.rotacaoTabuleiro {
+  width:100%;
+  height:100%;
+  transform:rotate(-63deg);
+  transform-origin:72% 61%;
+  transition:transform 1.5s cubic-bezier(.18,.75,.22,1)
+}
+/* permite deslocar todo o tabuleiro durante a navegação */
+.espacoTabuleiro {
+  position:absolute;
+  top:0;
+  left:0;
+  will-change:transform
+}
+/* ajusta a apresentação de desenho tabuleiro */
+.desenhoTabuleiro {
+  overflow:visible;
+  display:block
+}
+/* ajusta a apresentação de vinheta tabuleiro */
+.vinhetaTabuleiro {
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,var(--fundoPagina) 0%,transparent 14%,transparent 90%,var(--fundoPagina)),linear-gradient(0deg,var(--fundoPagina),transparent 18%,transparent 84%,var(--fundoPagina))
+}
+/* ajusta a apresentação de legenda tabuleiro */
+.legendaTabuleiro {
+  position:absolute;
+  right:14%;
+  top:14%;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:11px;
+  letter-spacing:.15em;
+  color:#89948d;
+  pointer-events:none;
+  transition:opacity .3s
+}
+/* ajusta a apresentação de simbolo legenda */
+.simboloLegenda {
+  height:6px;
+  width:6px;
+  background:#708c7c;
+  transform:rotate(45deg)
+}
+/* ajusta a apresentação de percorrendo historia */
+.percorrendoHistoria .areaTabuleiro {
+  clip-path:inset(0)
+}
+/* ajusta a apresentação de percorrendo historia */
+.percorrendoHistoria .rotacaoTabuleiro {
+  transform:rotate(0deg)
+}
+/* ajusta a apresentação de percorrendo historia */
+.percorrendoHistoria .legendaTabuleiro {
+  opacity:0
+}
+/* ajusta a apresentação de percorrendo historia */
+.percorrendoHistoria .vinhetaTabuleiro {
+  background:linear-gradient(0deg,var(--fundoPagina),transparent 20%,transparent 82%,var(--fundoPagina)),linear-gradient(90deg,var(--fundoPagina),transparent 8%,transparent 94%,var(--fundoPagina))
+}
+/* desenha o contorno externo do caminho contínuo */
+.contornoTrajeto {
+  fill:none;
+  stroke:#d2dcd3;
+  stroke-width:99;
+  stroke-linejoin:round;
+  stroke-linecap:round
+}
+/* preenche o caminho sobre o qual as casas são desenhadas */
+.superficieTrajeto {
+  fill:none;
+  stroke:#fefefd;
+  stroke-width:95;
+  stroke-linejoin:round;
+  stroke-linecap:round
+}
+/* ajusta a apresentação de preenchimento casa */
+.preenchimentoCasa {
+  fill:#fefefd;
+  transition:fill .35s
+}
+/* ajusta a apresentação de casa nas casas já percorridas */
+.casa.concluido .preenchimentoCasa {
+  fill:#edf3ec
+}
+/* ajusta a apresentação de casa na seleção atual */
+.casa.ativo .preenchimentoCasa {
+  fill:#dceadd
+}
+/* ajusta a apresentação de numero casa */
+.numeroCasa {
+  font-family:var(--fonteSemSerifa);
+  font-size:15px;
+  fill:#9da69f;
+  font-weight:400;
+  user-select:none;
+  pointer-events:none
+}
+/* ajusta a apresentação de casa nas casas já percorridas */
+.casa.concluido .numeroCasa {
+  fill:#87988c
+}
+/* ajusta a apresentação de casa na seleção atual */
+.casa.ativo .numeroCasa {
+  opacity:0
+}
+/* ajusta a apresentação de ano casa */
+.anoCasa {
+  font-family:var(--fonteSemSerifa);
+  font-size:13px;
+  fill:#89968d;
+  pointer-events:none;
+  letter-spacing:.03em
+}
+/* ajusta a apresentação de casa na seleção atual */
+.casa.ativo .anoCasa {
+  fill:var(--verdePrincipal);
+  font-weight:600
+}
+/* ajusta a apresentação de divisor casa */
+.divisorCasa {
+  stroke:#d4ddd4;
+  stroke-width:1;
+  pointer-events:none
+}
+/* permite selecionar cada acontecimento diretamente pelo tabuleiro */
+.casa {
+  cursor:pointer;
+  outline:none
+}
+/* ajusta a apresentação de casa durante a navegação por teclado */
+.casa:focus-visible .preenchimentoCasa {
+  stroke:var(--verdePrincipal);
+  stroke-width:2
+}
+/* ajusta a apresentação de casa ao passar o cursor */
+.casa:hover .preenchimentoCasa {
+  fill:#e8eee5
+}
+/* ajusta a apresentação de marco */
+.marco {
+  color:#8ca391;
+  opacity:.86;
+  transition:opacity .4s;
+  pointer-events:none
+}
+/* ajusta a apresentação de marco na seleção atual */
+.marco.ativo {
+  color:#225746;
+  opacity:1
+}
+/* ajusta a apresentação de marco nas casas já percorridas */
+.marco.concluido {
+  opacity:.94
+}
+/* liga o ícone ao lado externo da casa correspondente */
+.ligacaoMarco {
+  stroke:currentColor;
+  stroke-width:1;
+  stroke-dasharray:2 5
+}
+/* mantém o pictograma visível e alinhado ao marco histórico */
+.simboloMarco {
+  stroke:var(--contornoIcone);
+  stroke-width:1.35;
+  fill:none;
+  stroke-linecap:round;
+  stroke-linejoin:round
+}
+/* ajusta a apresentação de nome marco */
+.nomeMarco {
+  font-family:var(--fonteSemSerifa);
+  fill:currentColor;
+  font-size:15px;
+  letter-spacing:-.01em;
+  opacity:0;
+  transition:opacity .35s
+}
+/* ajusta a apresentação de marco na seleção atual */
+.marco.ativo .nomeMarco {
+  opacity:1
+}
+/* ajusta a apresentação de legenda marco */
+.legendaMarco {
+  font-size:10px;
+  letter-spacing:.13em;
+  font-weight:500
+}
+/* aplica a cor verde e a sombra ao personagem figurativo */
+.corpoBoneco {
+  fill:#214f3b;
+  filter:url(#sombraPersonagem)
+}
+/* ajusta a apresentação de sombra boneco */
+.sombraBoneco {
+  fill:#466944;
+  opacity:.16
+}
+/* ajusta a apresentação de caminhando */
+.caminhando .corpoBoneco {
+  animation:passoPersonagem .22s ease-in-out infinite alternate
+}
+/* anima o pequeno movimento do personagem ao caminhar */
+@keyframes passoPersonagem {
+  /* define o estado final da animação */
+  to {
+    transform:translateY(-3px) rotate(2deg)
+  }
+
+}
+/* posiciona os textos e controles sobre o tabuleiro */
+.percurso {
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity .8s .4s
+}
+/* ajusta a apresentação de percorrendo historia */
+.percorrendoHistoria .percurso {
+  opacity:1
+}
+/* ajusta a apresentação de cabecalho tempo */
+.cabecalhoTempo {
+  position:absolute;
+  top:28px;
+  left:5.6%;
+  right:5.6%;
+  display:flex;
+  gap:65px;
+  align-items:center
+}
+/* ajusta a apresentação de data atual */
+.dataAtual {
+  display:flex;
+  flex-direction:column;
+  flex:0 0 175px
+}
+/* ajusta a apresentação de data atual */
+.dataAtual .sobretitulo {
+  font-size:11px;
+  letter-spacing:.11em
+}
+/* ajusta a apresentação de data atual */
+.dataAtual>span:last-child {
+  font-size:66px;
+  font-weight:350;
+  letter-spacing:-.075em;
+  line-height:1.15;
+  font-variant-numeric:tabular-nums
+}
+/* ajusta a apresentação de area linha tempo */
+.areaLinhaTempo {
+  flex:1;
+  max-width:850px;
+  margin-left:auto;
+  pointer-events:auto
+}
+/* ajusta a apresentação de titulo linha tempo */
+.tituloLinhaTempo {
+  display:flex;
+  justify-content:space-between;
+  font-size:12px;
+  color:var(--textoSuave);
+  margin-bottom:12px
+}
+/* ajusta a apresentação de titulo linha tempo */
+.tituloLinhaTempo span:last-child {
+  font-variant-numeric:tabular-nums;
+  color:#849088
+}
+/* ajusta a barra de anos e seu controle de seleção */
+input[type=range] {
+  --progresso:0%;
+  width:100%;
+  height:24px;
+  padding:0;
+  margin:0;
+  -webkit-appearance:none;
+  appearance:none;
+  background:transparent;
+  cursor:pointer;
+  display:block
+}
+/* ajusta a barra de anos e seu controle de seleção */
+input[type=range]::-webkit-slider-runnable-track {
+  height:2px;
+  background:linear-gradient(to right,var(--verdePrincipal) 0%,var(--verdePrincipal) var(--progresso),#d8dfd8 var(--progresso),#d8dfd8 100%)
+}
+/* ajusta a barra de anos e seu controle de seleção */
+input[type=range]::-moz-range-track {
+  height:2px;
+  background:#d8dfd8
+}
+/* ajusta a barra de anos e seu controle de seleção */
+input[type=range]::-moz-range-progress {
+  height:2px;
+  background:var(--verdePrincipal)
+}
+/* ajusta a barra de anos e seu controle de seleção */
+input[type=range]::-webkit-slider-thumb {
+  appearance:none;
+  width:10px;
+  height:10px;
+  background:var(--verdePrincipal);
+  border:2px solid var(--fundoPagina);
+  outline:1px solid var(--verdePrincipal);
+  border-radius:50%;
+  margin-top:-4px
+}
+/* ajusta a barra de anos e seu controle de seleção */
+input[type=range]::-moz-range-thumb {
+  width:8px;
+  height:8px;
+  background:var(--verdePrincipal);
+  border:2px solid var(--fundoPagina);
+  border-radius:50%
+}
+/* ajusta a apresentação de navegacao periodos */
+.navegacaoPeriodos {
+  position:relative;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  font-size:12px;
+  color:#7b877f;
+  margin-top:4px
+}
+/* ajusta a apresentação de navegacao periodos */
+.navegacaoPeriodos button {
+  min-height:30px;
+  display:flex;
+  gap:9px;
+  align-items:center;
+  color:inherit
+}
+/* ajusta a apresentação de navegacao periodos na seleção atual */
+.navegacaoPeriodos button.ativo {
+  color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de navegacao periodos */
+.navegacaoPeriodos button span {
+  font-size:11px
+}
+/* posiciona o título e o resumo da casa selecionada */
+.acontecimentoAtual {
+  position:absolute;
+  top:165px;
+  left:9%;
+  width:min(610px,59%);
+  pointer-events:auto;
+  transition:opacity .2s,transform .3s
+}
+/* ajusta a apresentação de cabecalho tempo */
+.cabecalhoTempo,.acontecimentoAtual {
+  isolation:isolate
+}
+/* desfoca e suaviza o tabuleiro atrás dos textos para preservar a leitura */
+.cabecalhoTempo::before,.acontecimentoAtual::before {
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  background:rgb(var(--corFundoLeitura) / .97);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 32px,#000 calc(100% - 32px),transparent),linear-gradient(to bottom,transparent,#000 24px,#000 calc(100% - 32px),transparent);
+  mask-image:linear-gradient(to right,transparent,#000 32px,#000 calc(100% - 32px),transparent),linear-gradient(to bottom,transparent,#000 24px,#000 calc(100% - 32px),transparent);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect
+}
+/* ajusta a apresentação de cabecalho tempo */
+.cabecalhoTempo::before {
+  inset:-26px -38px -30px
+}
+/* ajusta a apresentação de acontecimento atual */
+.acontecimentoAtual::before {
+  inset:-28px -40px -34px
+}
+/* ajusta a apresentação de informacoes acontecimento */
+.informacoesAcontecimento {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:#7b8c7e;
+  font-size:10px;
+  letter-spacing:.12em;
+  font-weight:500
+}
+/* ajusta a apresentação de divisor acontecimento */
+.divisorAcontecimento {
+  width:19px;
+  height:1px;
+  background:#c2cec2
+}
+/* ajusta a apresentação de acontecimento atual */
+.acontecimentoAtual h2 {
+  font-size:clamp(30px,3.35vw,48px);
+  font-weight:450;
+  line-height:1.13;
+  letter-spacing:-.055em;
+  margin:16px 0 15px;
+  outline:none;
+  max-width:650px
+}
+/* ajusta a apresentação de acontecimento atual */
+.acontecimentoAtual p {
+  font-size:16px;
+  line-height:1.65;
+  color:#66746a;
+  max-width:510px;
+  margin:0
+}
+/* ajusta a apresentação de botao ler mais */
+.botaoLerMais {
+  font-size:13px;
+  color:var(--verdePrincipal);
+  margin-top:9px;
+  border-bottom:1px solid #b1c3b5;
+  min-height:36px;
+  display:inline-flex;
+  align-items:center;
+  gap:25px
+}
+/* ajusta a apresentação de botao ler mais ao passar o cursor */
+.botaoLerMais:hover {
+  border-color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de atualizando acontecimento */
+.atualizandoAcontecimento {
+  animation:entradaAcontecimento .4s
+}
+/* suaviza a entrada do texto quando a casa selecionada muda */
+@keyframes entradaAcontecimento {
+  /* define o estado inicial da animação */
+  from {
+    opacity:.1;
+    transform:translateY(5px)
+  }
+  /* define o estado final da animação */
+  to {
+    opacity:1;
+    transform:translateY(0)
+  }
+
+}
+/* organiza os controles abaixo do tabuleiro e protege sua leitura */
+.rodapePercurso {
+  position:absolute;
+  bottom:30px;
+  left:5.6%;
+  right:5.6%;
+  height:67px;
+  border-top:1px solid var(--linhaSeparadora);
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  pointer-events:auto;
+  background:linear-gradient(0deg,var(--fundoPagina),var(--fundoPagina) 75%,transparent)
+}
+/* ajusta a apresentação de dica controles */
+.dicaControles {
+  display:flex;
+  gap:7px;
+  align-items:center;
+  font-size:12px;
+  color:#7b897e;
+  line-height:1.45
+}
+/* ajusta a apresentação de dica controles */
+.dicaControles>span:last-child {
+  margin-left:10px
+}
+/* ajusta a apresentação de tecla teclado */
+.teclaTeclado {
+  display:grid;
+  place-items:center;
+  border:1px solid #d4ded3;
+  width:25px;
+  height:25px;
+  font-size:14px
+}
+/* ajusta a apresentação de controles movimento */
+.controlesMovimento {
+  display:flex;
+  align-items:center;
+  gap:24px;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:-3px
+}
+/* ajusta a apresentação de controles movimento */
+.controlesMovimento button {
+  font-size:29px;
+  font-weight:300;
+  width:53px;
+  min-height:46px;
+  color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de controles movimento */
+.controlesMovimento button:disabled {
+  color:#c6d0c4
+}
+/* ajusta a apresentação de controles movimento ao passar o cursor */
+.controlesMovimento button:hover:not(:disabled) {
+  background:#edf2e9
+}
+/* ajusta a apresentação de controles movimento */
+.controlesMovimento>span {
+  font-size:12px;
+  color:#6f8273;
+  font-variant-numeric:tabular-nums
+}
+/* ajusta a apresentação de botao reiniciar */
+.botaoReiniciar {
+  color:#819083;
+  font-size:12px
+}
+/* ajusta a apresentação de erro carregamento */
+.erroCarregamento,.avisoSemJavascript {
+  position:absolute;
+  inset:150px 9% auto;
+  z-index:10;
+  background:var(--fundoPagina);
+  padding:20px;
+  font-size:18px;
+  color:#8d382c
+}
+/* define a janela retangular usada nos artigos e nas fontes */
+.janelaLeitura {
+  position:fixed;
+  width:min(800px,calc(100vw - 80px));
+  max-width:800px;
+  height:min(860px,calc(100svh - 64px));
+  max-height:calc(100svh - 64px);
+  padding:0;
+  border:0;
+  color:var(--textoPrincipal);
+  background:var(--fundoElevado);
+  box-shadow:0 18px 70px #142e241c;
+  overflow:hidden
+}
+/* ajusta a apresentação de janela leitura */
+.janelaLeitura[open] {
+  animation:entradaJanela .3s ease
+}
+/* ajusta a apresentação de janela leitura */
+.janelaLeitura::backdrop {
+  background:rgb(37 51 43 / .27);
+  animation:entradaFundo .25s ease
+}
+/* ajusta a apresentação de botao fechar leitura */
+.botaoFecharLeitura {
+  position:absolute;
+  top:16px;
+  right:21px;
+  z-index:3;
+  font-size:28px;
+  font-weight:300;
+  background:var(--fundoElevado);
+  width:44px;
+  height:44px;
+  color:#647469
+}
+/* ajusta a apresentação de botao fechar leitura ao passar o cursor */
+.botaoFecharLeitura:hover {
+  color:var(--textoPrincipal)
+}
+/* permite rolar leituras longas dentro da janela */
+.rolagemLeitura {
+  height:100%;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:#d1d9d1 var(--fundoElevado)
+}
+/* define o espaço interno dos textos da janela de leitura */
+.conteudoLeitura {
+  padding:64px 76px 54px
+}
+/* ajusta a apresentação de sobretitulo leitura */
+.sobretituloLeitura {
+  font-size:12px;
+  letter-spacing:.15em;
+  color:var(--verdePrincipal);
+  margin:0 0 20px
+}
+/* ajusta a apresentação de icone leitura */
+.iconeLeitura {
+  color:var(--verdePrincipal);
+  width:36px;
+  height:36px;
+  margin:12px 0 20px
+}
+/* define o espaço interno dos textos da janela de leitura */
+.conteudoLeitura h2 {
+  font-size:46px;
+  font-weight:450;
+  line-height:1.12;
+  letter-spacing:-.055em;
+  margin:0 0 22px
+}
+/* ajusta a apresentação de introducao leitura */
+.introducaoLeitura {
+  font-size:20px;
+  line-height:1.6;
+  color:#566c5e;
+  letter-spacing:-.025em;
+  border-bottom:1px solid #e0e6e0;
+  padding-bottom:28px;
+  margin:0 0 30px
+}
+/* ajusta a apresentação de secao leitura */
+.secaoLeitura {
+  margin:30px 0
+}
+/* ajusta a apresentação de secao leitura */
+.secaoLeitura h3,.tituloListaFontes {
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.01em;
+  margin:0 0 12px
+}
+/* ajusta a apresentação de secao leitura */
+.secaoLeitura p,.observacaoPesquisa {
+  font-size:16px;
+  line-height:1.8;
+  color:#5e6c62;
+  margin:0 0 16px
+}
+/* destaca os links que vinculam parágrafos às suas fontes */
+.citacaoParagrafo {
+  font-size:12px;
+  margin-left:4px;
+  text-decoration:none;
+  white-space:nowrap;
+  vertical-align:super;
+  color:#4e7a5d
+}
+/* ajusta a apresentação de citacao paragrafo ao passar o cursor */
+.citacaoParagrafo:hover {
+  text-decoration:underline
+}
+/* destaca as observações de contexto ao final da leitura */
+.observacaoHistorica {
+  border-left:2px solid #8aa68f;
+  padding:3px 0 3px 20px;
+  font-size:14px!important;
+  line-height:1.7;
+  color:#5c6f60;
+  margin:30px 0!important
+}
+/* ajusta a apresentação de fontes artigo */
+.fontesArtigo {
+  border-top:1px solid #e1e6e0;
+  margin-top:36px;
+  padding-top:24px
+}
+/* organiza as referências em uma lista numerada visualmente */
+.listaFontes {
+  list-style:none;
+  margin:0;
+  padding:0;
+  counter-reset:fonte
+}
+/* ajusta a apresentação de lista fontes */
+.listaFontes li {
+  padding:15px 0;
+  border-bottom:1px solid #edf0ec;
+  font-size:13px;
+  line-height:1.65;
+  display:flex;
+  gap:13px
+}
+/* ajusta a apresentação de numero fonte */
+.numeroFonte {
+  color:#98a69a;
+  flex:0 0 20px;
+  font-size:12px
+}
+/* ajusta a apresentação de descricao fonte */
+.descricaoFonte {
+  display:block;
+  color:#8a968e;
+  font-size:12px;
+  line-height:1.55;
+  margin-top:4px
+}
+/* ajusta a apresentação de lista fontes */
+.listaFontes a {
+  color:#4d6755;
+  text-decoration:none
+}
+/* ajusta a apresentação de lista fontes ao passar o cursor */
+.listaFontes a:hover {
+  text-decoration:underline
+}
+/* ajusta a apresentação de retorno leitura */
+.retornoLeitura {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  border-top:1px solid #dbe3d9;
+  margin-top:30px;
+  padding:22px 0 2px;
+  font-size:14px;
+  color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de retorno leitura */
+.retornoLeitura span:last-child {
+  font-size:20px
+}
+/* apresenta a data de reunião das fontes e as orientações de consulta */
+.introducaoBibliografia {
+  color:#839086;
+  font-size:12px;
+  line-height:1.7;
+  margin-bottom:25px
+}
+/* ajusta a apresentação de tipo fonte */
+.tipoFonte {
+  display:block;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.07em;
+  color:#879a89;
+  margin-bottom:4px
+}
+/* organiza as quantidades de casas leituras e fontes da pesquisa */
+.numerosPesquisa {
+  display:flex;
+  gap:35px;
+  border-top:1px solid var(--linhaSeparadora);
+  border-bottom:1px solid var(--linhaSeparadora);
+  padding:21px 0;
+  margin:28px 0
+}
+/* organiza as quantidades de casas leituras e fontes da pesquisa */
+.numerosPesquisa span {
+  font-size:12px;
+  color:var(--textoSuave);
+  display:flex;
+  flex-direction:column;
+  gap:5px
+}
+/* organiza as quantidades de casas leituras e fontes da pesquisa */
+.numerosPesquisa strong {
+  font-size:27px;
+  font-weight:400;
+  color:var(--verdePrincipal)
+}
+/* apresenta a confirmação de retorno com espaço para as duas opções */
+.janelaRetorno {
+  position:fixed;
+  font:inherit;
+  width:min(460px,calc(100vw - 32px));
+  max-width:460px;
+  max-height:calc(100svh - 40px);
+  padding:40px 36px 30px;
+  border:1px solid var(--linhaSeparadora);
+  border-radius:18px;
+  background:var(--fundoElevado);
+  color:var(--textoPrincipal);
+  overflow-y:auto;
+  box-shadow:0 18px 70px #142e241c
+}
+/* ajusta a apresentação de janela retorno */
+.janelaRetorno[open] {
+  animation:entradaJanela .25s ease
+}
+/* ajusta a apresentação de janela retorno */
+.janelaRetorno::backdrop {
+  background:rgb(37 51 43 / .27)
+}
+/* ajusta a apresentação de janela retorno */
+.janelaRetorno .sobretitulo {
+  margin:0 0 14px;
+  font-size:10px
+}
+/* ajusta a apresentação de janela retorno */
+.janelaRetorno h2 {
+  font-size:29px;
+  font-weight:450;
+  line-height:1.2;
+  letter-spacing:-.04em;
+  margin:0 0 15px
+}
+/* ajusta a apresentação de janela retorno */
+.janelaRetorno > p:last-of-type {
+  font-size:14px;
+  line-height:1.7;
+  color:var(--textoSuave);
+  margin:0 0 26px
+}
+/* ajusta a apresentação de botao fechar retorno */
+.botaoFecharRetorno {
+  position:absolute;
+  top:9px;
+  right:10px;
+  width:36px;
+  font-size:24px;
+  font-weight:300;
+  color:var(--textoSuave)
+}
+/* ajusta a apresentação de botao fechar retorno ao passar o cursor */
+.botaoFecharRetorno:hover {
+  color:var(--textoPrincipal)
+}
+/* alinha as opções para continuar o percurso ou retornar à abertura */
+.acoesRetorno {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  justify-content:space-between
+}
+/* alinha as opções para continuar o percurso ou retornar à abertura */
+.acoesRetorno button {
+  padding:11px 16px;
+  font-size:12px;
+  border-radius:999px
+}
+/* ajusta a apresentação de botao continuar percurso */
+.botaoContinuarPercurso {
+  border:1px solid var(--linhaSeparadora);
+  color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de botao continuar percurso ao passar o cursor */
+.botaoContinuarPercurso:hover {
+  border-color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de botao confirmar retorno */
+.botaoConfirmarRetorno {
+  background:var(--fundoAcao);
+  color:var(--textoAcao);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px
+}
+/* ajusta a apresentação de botao confirmar retorno ao passar o cursor */
+.botaoConfirmarRetorno:hover {
+  background:var(--fundoAcaoRealcada)
+}
+
+
+/* ajusta a apresentação de botao texto no tema escuro */
+[data-tema="escuro"] .botaoTexto,
+[data-tema="escuro"] .descricaoAbertura,
+[data-tema="escuro"] .acontecimentoAtual p,
+[data-tema="escuro"] .introducaoLeitura,
+[data-tema="escuro"] .secaoLeitura p,
+[data-tema="escuro"] .observacaoPesquisa,
+[data-tema="escuro"] .observacaoHistorica,
+[data-tema="escuro"] .botaoFecharLeitura {
+  color:var(--textoSuave)
+}
+/* ajusta a apresentação de botao fechar leitura no tema escuro ao passar o cursor */
+[data-tema="escuro"] .botaoFecharLeitura:hover,
+[data-tema="escuro"] .botaoTexto:hover {
+  color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de legenda tabuleiro no tema escuro */
+[data-tema="escuro"] .legendaTabuleiro,
+[data-tema="escuro"] .tituloLinhaTempo,
+[data-tema="escuro"] .tituloLinhaTempo span:last-child,
+[data-tema="escuro"] .navegacaoPeriodos,
+[data-tema="escuro"] .informacoesAcontecimento,
+[data-tema="escuro"] .dicaControles,
+[data-tema="escuro"] .controlesMovimento > span,
+[data-tema="escuro"] .numeroFonte,
+[data-tema="escuro"] .descricaoFonte,
+[data-tema="escuro"] .introducaoBibliografia,
+[data-tema="escuro"] .tipoFonte {
+  color:#9cad9f
+}
+/* ajusta a apresentação de navegacao periodos no tema escuro na seleção atual */
+[data-tema="escuro"] .navegacaoPeriodos button.ativo {
+  color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de simbolo legenda no tema escuro */
+[data-tema="escuro"] .simboloLegenda,
+[data-tema="escuro"] .divisorAcontecimento {
+  background:#607a66
+}
+/* ajusta a apresentação de linha extremos no tema escuro */
+[data-tema="escuro"] .linhaExtremos {
+  background:var(--linhaSeparadora)
+}
+/* ajusta a apresentação de contorno trajeto no tema escuro */
+[data-tema="escuro"] .contornoTrajeto {
+  stroke:#34423a
+}
+/* ajusta a apresentação de superficie trajeto no tema escuro */
+[data-tema="escuro"] .superficieTrajeto {
+  stroke:#1a231d
+}
+/* ajusta a apresentação de preenchimento casa no tema escuro */
+[data-tema="escuro"] .preenchimentoCasa {
+  fill:#1a231d
+}
+/* ajusta a apresentação de casa no tema escuro nas casas já percorridas */
+[data-tema="escuro"] .casa.concluido .preenchimentoCasa {
+  fill:#202e26
+}
+/* ajusta a apresentação de casa no tema escuro na seleção atual */
+[data-tema="escuro"] .casa.ativo .preenchimentoCasa {
+  fill:#304b39
+}
+/* ajusta a apresentação de casa no tema escuro ao passar o cursor */
+[data-tema="escuro"] .casa:hover .preenchimentoCasa {
+  fill:#2b3b31
+}
+/* ajusta a apresentação de numero casa no tema escuro nas casas já percorridas */
+[data-tema="escuro"] .numeroCasa,
+[data-tema="escuro"] .casa.concluido .numeroCasa {
+  fill:#8b9e90
+}
+/* ajusta a apresentação de ano casa no tema escuro */
+[data-tema="escuro"] .anoCasa {
+  fill:#9cad9f
+}
+/* ajusta a apresentação de casa no tema escuro na seleção atual */
+[data-tema="escuro"] .casa.ativo .anoCasa {
+  fill:var(--verdePrincipal)
+}
+/* ajusta a apresentação de divisor casa no tema escuro */
+[data-tema="escuro"] .divisorCasa {
+  stroke:#3d4d42
+}
+/* ajusta a apresentação de marco no tema escuro */
+[data-tema="escuro"] .marco {
+  color:#91b39a
+}
+/* ajusta a apresentação de marco no tema escuro na seleção atual */
+[data-tema="escuro"] .marco.ativo {
+  color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de corpo boneco no tema escuro */
+[data-tema="escuro"] .corpoBoneco {
+  fill:#b3d7bc
+}
+/* ajusta a apresentação de sombra boneco no tema escuro */
+[data-tema="escuro"] .sombraBoneco {
+  fill:#8cbe9b
+}
+/* ajusta a apresentação de botao voltar abertura no tema escuro ao passar o cursor */
+[data-tema="escuro"] .botaoVoltarAbertura:hover,
+[data-tema="escuro"] .controlesMovimento button:hover:not(:disabled) {
+  background:#202c24
+}
+/* ajusta a apresentação de controles movimento no tema escuro */
+[data-tema="escuro"] .controlesMovimento button:disabled {
+  color:#4c5d50
+}
+/* aplica os ajustes visuais deste grupo de elementos */
+[data-tema="escuro"] input[type="range"]::-webkit-slider-runnable-track {
+  background:linear-gradient(to right,var(--verdePrincipal) 0%,var(--verdePrincipal) var(--progresso),var(--linhaSeparadora) var(--progresso),var(--linhaSeparadora) 100%)
+}
+/* aplica os ajustes visuais deste grupo de elementos */
+[data-tema="escuro"] input[type="range"]::-moz-range-track {
+  background:var(--linhaSeparadora)
+}
+/* ajusta a apresentação de botao ler mais no tema escuro */
+[data-tema="escuro"] .botaoLerMais,
+[data-tema="escuro"] .teclaTeclado,
+[data-tema="escuro"] .introducaoLeitura,
+[data-tema="escuro"] .fontesArtigo,
+[data-tema="escuro"] .listaFontes li,
+[data-tema="escuro"] .retornoLeitura {
+  border-color:var(--linhaSeparadora)
+}
+/* ajusta a apresentação de botao ler mais no tema escuro ao passar o cursor */
+[data-tema="escuro"] .botaoLerMais:hover {
+  border-color:var(--verdePrincipal)
+}
+/* ajusta a apresentação de observacao historica no tema escuro */
+[data-tema="escuro"] .observacaoHistorica {
+  border-color:#678a70
+}
+/* ajusta a apresentação de citacao paragrafo no tema escuro */
+[data-tema="escuro"] .citacaoParagrafo,
+[data-tema="escuro"] .listaFontes a {
+  color:#add0b7
+}
+/* ajusta a apresentação de rolagem leitura no tema escuro */
+[data-tema="escuro"] .rolagemLeitura {
+  scrollbar-color:#3b4a40 var(--fundoElevado)
+}
+/* ajusta a apresentação de janela leitura no tema escuro */
+[data-tema="escuro"] .janelaLeitura,
+[data-tema="escuro"] .janelaRetorno {
+  box-shadow:0 18px 70px rgb(0 0 0 / .3)
+}
+/* ajusta a apresentação de janela leitura no tema escuro */
+[data-tema="escuro"] .janelaLeitura::backdrop,
+[data-tema="escuro"] .janelaRetorno::backdrop {
+  background:rgb(0 0 0 / .58)
+}
+/* ajusta a apresentação de erro carregamento no tema escuro */
+[data-tema="escuro"] .erroCarregamento,
+[data-tema="escuro"] .avisoSemJavascript {
+  color:#e6aaa0
+}
+
+/* suaviza a abertura das janelas de leitura e confirmação */
+@keyframes entradaJanela {
+  /* define o estado inicial da animação */
+  from {
+    opacity:0;
+    transform:translateY(13px)
+  }
+  /* define o estado final da animação */
+  to {
+    opacity:1;
+    transform:translateY(0)
+  }
+
+}
+/* suaviza a entrada do fundo das janelas */
+@keyframes entradaFundo {
+  /* define o estado inicial da animação */
+  from {
+    opacity:0
+  }
+  /* define o estado final da animação */
+  to {
+    opacity:1
+  }
+
+}
+/* ajusta o espaço e a tipografia para telas muito largas */
+@media(min-width:1600px) {
+  /* posiciona os textos principais da apresentação */
+  .textoAbertura {
+    top:17%
+  }
+  /* posiciona o título e o resumo da casa selecionada */
+  .acontecimentoAtual {
+    top:190px
+  }
+  /* ajusta a apresentação de cabecalho tempo */
+  .cabecalhoTempo {
+    top:40px
+  }
+  /* ajusta a apresentação de acontecimento atual */
+  .acontecimentoAtual h2 {
+    font-size:51px
+  }
+
+}
+/* ajusta o percurso para telas de computador com pouca altura */
+@media(max-height:810px) and (min-width:761px) {
+  /* delimita a área da experiência e mantém o tabuleiro dentro da página */
+  .aplicacao {
+    min-height:680px
+  }
+  /* organiza o cabeçalho acima das telas e do tabuleiro */
+  .cabecalhoSite {
+    height:84px
+  }
+  /* reserva o espaço abaixo do cabeçalho para a abertura e o percurso */
+  main {
+    top:84px
+  }
+  /* posiciona os textos principais da apresentação */
+  .textoAbertura {
+    top:10%
+  }
+  /* define o destaque tipográfico do título da abertura */
+  h1 {
+    font-size:88px;
+    margin:22px 0
+  }
+  /* define o ritmo de leitura da descrição inicial */
+  .descricaoAbertura {
+    margin-bottom:22px;
+    font-size:17px
+  }
+  /* ajusta a apresentação de extremos abertura */
+  .extremosAbertura {
+    bottom:6%
+  }
+  /* ajusta a apresentação de legenda abertura */
+  .legendaAbertura {
+    bottom:5%
+  }
+  /* ajusta a apresentação de cabecalho tempo */
+  .cabecalhoTempo {
+    top:20px
+  }
+  /* ajusta a apresentação de data atual */
+  .dataAtual>span:last-child {
+    font-size:57px
+  }
+  /* posiciona o título e o resumo da casa selecionada */
+  .acontecimentoAtual {
+    top:142px
+  }
+  /* ajusta a apresentação de acontecimento atual */
+  .acontecimentoAtual h2 {
+    font-size:37px;
+    margin:12px 0
+  }
+  /* ajusta a apresentação de acontecimento atual */
+  .acontecimentoAtual p {
+    font-size:15px
+  }
+  /* organiza os controles abaixo do tabuleiro e protege sua leitura */
+  .rodapePercurso {
+    bottom:22px;
+    height:57px
+  }
+
+}
+/* adapta a apresentação e os controles para telas intermediárias */
+@media(max-width:1050px) {
+  /* ajusta a apresentação de cabecalho direito */
+  .cabecalhoDireito {
+    gap:25px
+  }
+  /* posiciona os textos principais da apresentação */
+  .textoAbertura {
+    left:7%;
+    top:17%
+  }
+  /* define o destaque tipográfico do título da abertura */
+  h1 {
+    font-size:88px
+  }
+  /* define o ritmo de leitura da descrição inicial */
+  .descricaoAbertura {
+    max-width:430px;
+    font-size:16px
+  }
+  /* ajusta a apresentação de extremos abertura */
+  .extremosAbertura {
+    left:7%
+  }
+  /* ajusta a apresentação de legenda abertura */
+  .legendaAbertura {
+    right:5%;
+    font-size:12px
+  }
+  /* ajusta a apresentação de cabecalho tempo */
+  .cabecalhoTempo {
+    gap:35px
+  }
+  /* ajusta a apresentação de data atual */
+  .dataAtual {
+    flex-basis:145px
+  }
+  /* posiciona o título e o resumo da casa selecionada */
+  .acontecimentoAtual {
+    left:7%;
+    width:66%
+  }
+  /* ajusta a apresentação de navegacao periodos */
+  .navegacaoPeriodos button span {
+    display:none
+  }
+  /* ajusta a apresentação de titulo linha tempo */
+  .tituloLinhaTempo {
+    font-size:11px
+  }
+
+}
+/* reorganiza o tabuleiro os textos e as janelas para celulares */
+@media(max-width:760px) {
+  /* delimita a área da experiência e mantém o tabuleiro dentro da página */
+  .aplicacao {
+    height:100svh;
+    min-height:740px
+  }
+  /* organiza o cabeçalho acima das telas e do tabuleiro */
+  .cabecalhoSite {
+    height:78px;
+    margin:0 6%;
+
+  }
+  /* alinha o símbolo e o nome da marca no cabeçalho */
+  .marcaSite {
+    font-size:10px;
+    gap:8px;
+    letter-spacing:.06em
+  }
+  /* preserva o tamanho e a cor verde do símbolo da marca */
+  .simboloMarca {
+    width:24px;
+    height:24px
+  }
+  /* ajusta a apresentação de cabecalho esquerdo */
+  .cabecalhoEsquerdo {
+    gap:8px
+  }
+  /* ajusta a apresentação de botao voltar abertura */
+  .botaoVoltarAbertura {
+    width:34px
+  }
+  /* ajusta a apresentação de periodo cabecalho */
+  .periodoCabecalho {
+    display:none
+  }
+  /* ajusta a apresentação de cabecalho direito */
+  .cabecalhoDireito {
+    gap:0
+  }
+  /* ajusta a apresentação de botao texto */
+  .botaoTexto {
+    font-size:12px
+  }
+  /* ajusta a apresentação de cabecalho direito */
+  .cabecalhoDireito .botaoTexto {
+    max-width:113px
+  }
+  /* reserva o espaço abaixo do cabeçalho para a abertura e o percurso */
+  main {
+    top:78px
+  }
+  /* posiciona os textos principais da apresentação */
+  .textoAbertura {
+    top:7%;
+    left:8%;
+    max-width:90%
+  }
+  /* posiciona os textos principais da apresentação */
+  .textoAbertura .sobretitulo {
+    font-size:10px
+  }
+  /* ajusta a apresentação de linha fina */
+  .linhaFina {
+    width:20px
+  }
+  /* define o destaque tipográfico do título da abertura */
+  h1 {
+    font-size:76px;
+    margin:20px 0;
+    line-height:1.02
+  }
+  /* define o ritmo de leitura da descrição inicial */
+  .descricaoAbertura {
+    font-size:15px;
+    line-height:1.65;
+    max-width:280px;
+    margin-bottom:22px
+  }
+  /* destaca o início do percurso com a forma arredondada e a cor verde */
+  .botaoIniciarPercurso {
+    font-size:13px;
+    padding:12px 18px;
+    gap:21px
+  }
+  /* apresenta a orientação de navegação abaixo do botão inicial */
+  .instrucaoAbertura {
+    font-size:11px;
+    max-width:260px;
+    line-height:1.6
+  }
+  /* alinha os ícones e o texto do controle de tema */
+  .botaoAlternarTema {
+    font-size:11px;
+    min-height:34px
+  }
+  /* ajusta a apresentação de extremos abertura */
+  .extremosAbertura {
+    bottom:5%;
+    left:8%;
+    gap:17px
+  }
+  /* ajusta a apresentação de linha extremos */
+  .linhaExtremos {
+    width:60px
+  }
+  /* ajusta a apresentação de extremos abertura */
+  .extremosAbertura strong {
+    font-size:18px
+  }
+  /* ajusta a apresentação de extremos abertura */
+  .extremosAbertura span:not(.linhaExtremos) {
+    font-size:10px
+  }
+  /* ajusta a apresentação de legenda abertura */
+  .legendaAbertura {
+    display:none
+  }
+  /* recorta o mapa na abertura e prepara a expansão do percurso */
+  .areaTabuleiro {
+    clip-path:inset(50% 0 15%)
+  }
+  /* inclina o mapa na abertura e anima sua rotação ao iniciar */
+  .rotacaoTabuleiro {
+    transform:rotate(-52deg);
+    transform-origin:64% 65%
+  }
+  /* ajusta a apresentação de legenda tabuleiro */
+  .legendaTabuleiro {
+    display:none
+  }
+  /* ajusta a apresentação de botao iniciar mapa durante a navegação por teclado */
+  .botaoIniciarMapa:focus-visible {
+    outline:2px solid var(--verdePrincipal);
+    outline-offset:-8px
+  }
+  /* ajusta a apresentação de vinheta tabuleiro */
+  .vinhetaTabuleiro {
+    background:linear-gradient(0deg,var(--fundoPagina),transparent 32%,transparent 78%,var(--fundoPagina))
+  }
+  /* ajusta a apresentação de cabecalho tempo */
+  .cabecalhoTempo {
+    left:7%;
+    right:7%;
+    top:19px;
+    gap:23px;
+    align-items:flex-start
+  }
+  /* ajusta a apresentação de data atual */
+  .dataAtual {
+    flex:0 0 97px
+  }
+  /* ajusta a apresentação de data atual */
+  .dataAtual .sobretitulo {
+    font-size:9px;
+    letter-spacing:.06em;
+    white-space:nowrap
+  }
+  /* ajusta a apresentação de data atual */
+  .dataAtual>span:last-child {
+    font-size:49px;
+    margin-top:2px
+  }
+  /* ajusta a apresentação de area linha tempo */
+  .areaLinhaTempo {
+    margin-top:5px
+  }
+  /* ajusta a apresentação de titulo linha tempo */
+  .tituloLinhaTempo {
+    font-size:10px;
+    gap:5px;
+    line-height:1.3;
+    margin-bottom:9px
+  }
+  /* ajusta a apresentação de titulo linha tempo */
+  .tituloLinhaTempo span:first-child {
+    display:none
+  }
+  /* ajusta a apresentação de titulo linha tempo */
+  .tituloLinhaTempo span:last-child {
+    margin-left:auto
+  }
+  /* ajusta a apresentação de navegacao periodos */
+  .navegacaoPeriodos {
+    gap:5px;
+    font-size:10px
+  }
+  /* ajusta a apresentação de navegacao periodos */
+  .navegacaoPeriodos button {
+    font-size:10px
+  }
+  /* posiciona o título e o resumo da casa selecionada */
+  .acontecimentoAtual {
+    top:130px;
+    left:8%;
+    width:84%
+  }
+  /* ajusta a apresentação de nome marco */
+  .nomeMarco {
+    display:none
+  }
+  /* ajusta a apresentação de cabecalho tempo */
+  .cabecalhoTempo::before {
+    inset:-22px -26px -30px
+  }
+  /* ajusta a apresentação de acontecimento atual */
+  .acontecimentoAtual::before {
+    inset:-26px -30px -30px
+  }
+  /* ajusta a apresentação de informacoes acontecimento */
+  .informacoesAcontecimento {
+    font-size:9px;
+    letter-spacing:.08em
+  }
+  /* ajusta a apresentação de acontecimento atual */
+  .acontecimentoAtual h2 {
+    font-size:34px;
+    line-height:1.13;
+    margin:14px 0 12px;
+    max-width:550px
+  }
+  /* ajusta a apresentação de acontecimento atual */
+  .acontecimentoAtual p {
+    font-size:14px;
+    line-height:1.65;
+    max-width:450px
+  }
+  /* ajusta a apresentação de botao ler mais */
+  .botaoLerMais {
+    font-size:12px;
+    margin-top:8px;
+    gap:16px
+  }
+  /* organiza os controles abaixo do tabuleiro e protege sua leitura */
+  .rodapePercurso {
+    left:7%;
+    right:7%;
+    bottom:23px;
+    height:72px
+  }
+  /* ajusta a apresentação de dica controles */
+  .dicaControles {
+    font-size:10px;
+    max-width:125px
+  }
+  /* ajusta a apresentação de dica controles */
+  .dicaControles .teclaTeclado {
+    display:none
+  }
+  /* ajusta a apresentação de dica controles */
+  .dicaControles>span:last-child {
+    margin-left:0
+  }
+  /* ajusta a apresentação de controles movimento */
+  .controlesMovimento {
+    gap:11px;
+    left:auto;
+    right:0;
+    transform:none;
+    bottom:13px
+  }
+  /* ajusta a apresentação de controles movimento */
+  .controlesMovimento button {
+    width:43px
+  }
+  /* ajusta a apresentação de botao reiniciar */
+  .botaoReiniciar {
+    position:absolute;
+    right:0;
+    bottom:-14px;
+    font-size:10px;
+    min-height:24px
+  }
+  /* define a janela retangular usada nos artigos e nas fontes */
+  .janelaLeitura {
+    width:calc(100vw - 24px);
+    height:calc(100svh - 24px);
+    max-height:calc(100svh - 24px)
+  }
+  /* define o espaço interno dos textos da janela de leitura */
+  .conteudoLeitura {
+    padding:54px 28px 35px
+  }
+  /* ajusta a apresentação de botao fechar leitura */
+  .botaoFecharLeitura {
+    right:12px;
+    top:10px
+  }
+  /* define o espaço interno dos textos da janela de leitura */
+  .conteudoLeitura h2 {
+    font-size:35px
+  }
+  /* ajusta a apresentação de introducao leitura */
+  .introducaoLeitura {
+    font-size:18px
+  }
+  /* ajusta a apresentação de sobretitulo leitura */
+  .sobretituloLeitura {
+    font-size:11px
+  }
+  /* ajusta a apresentação de secao leitura */
+  .secaoLeitura p,.observacaoPesquisa {
+    font-size:15px;
+    line-height:1.8
+  }
+  /* organiza as quantidades de casas leituras e fontes da pesquisa */
+  .numerosPesquisa {
+    gap:25px
+  }
+  /* ajusta a apresentação de lista fontes */
+  .listaFontes li {
+    font-size:12px
+  }
+  /* ajusta a apresentação de apenas computador */
+  .apenasComputador {
+    display:none
+  }
+  /* apresenta a confirmação de retorno com espaço para as duas opções */
+  .janelaRetorno {
+    padding:38px 26px 26px
+  }
+  /* alinha as opções para continuar o percurso ou retornar à abertura */
+  .acoesRetorno {
+    flex-direction:column-reverse;
+    align-items:stretch
+  }
+  /* alinha as opções para continuar o percurso ou retornar à abertura */
+  .acoesRetorno button {
+    min-height:44px
+  }
+
+}
+/* ajusta a tipografia para celulares com telas mais estreitas */
+@media(max-width:380px) {
+  /* alinha o símbolo e o nome da marca no cabeçalho */
+  .marcaSite {
+    font-size:9px;
+    letter-spacing:.025em
+  }
+  /* posiciona os textos principais da apresentação */
+  .textoAbertura {
+    top:5%
+  }
+  /* define o destaque tipográfico do título da abertura */
+  h1 {
+    font-size:66px
+  }
+  /* define o ritmo de leitura da descrição inicial */
+  .descricaoAbertura {
+    font-size:14px
+  }
+  /* ajusta a apresentação de acontecimento atual */
+  .acontecimentoAtual h2 {
+    font-size:30px
+  }
+  /* ajusta a apresentação de area linha tempo */
+  .areaLinhaTempo {
+    min-width:150px
+  }
+  /* ajusta a apresentação de data atual */
+  .dataAtual {
+    flex-basis:85px
+  }
+
+}
+/* desativa movimentos quando o sistema solicita animações reduzidas */
+@media(prefers-reduced-motion:reduce) {
+  /* aplica os ajustes visuais deste grupo de elementos */
+  *,*::before,*::after {
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important
+  }
+  /* inclina o mapa na abertura e anima sua rotação ao iniciar */
+  .rotacaoTabuleiro {
+    transform:rotate(0deg)
+  }
+  /* permite deslocar todo o tabuleiro durante a navegação */
+  .espacoTabuleiro {
+    will-change:auto
+  }
+
+}

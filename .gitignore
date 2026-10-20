@@ -1,0 +1,32 @@
+# dependências e arquivos gerados
+/node_modules/
+/dist/
+/previa.html
+
+# arquivos de trabalho e instruções locais
+/work/
+/AGENTS.md
+/.agents/
+/.codex/
+/.vscode/
+/.idea/
+
+# configurações privadas de ambiente
+/.aws/
+.env
+.env.*
+!.env.example
+
+# registros caches e arquivos temporários
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.cache/
+.npm/
+
+# arquivos do sistema operacional
+.DS_Store
+Thumbs.db

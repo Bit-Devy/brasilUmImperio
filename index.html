@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!-- define a codificação a escala da página e as informações de apresentação -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafbf9">
+  <meta name="description" content="Um percurso interativo pela história do Brasil Império: da Independência, em 1822, à Proclamação da República, em 1889. Contextos, revoltas e transformações com fontes históricas.">
+  <title>Brasil Império — Uma história em movimento</title>
+  <!-- carrega o ícone usado na aba do navegador -->
+  <link rel="icon" href="./iconeSite.svg" type="image/svg+xml">
+  <!-- recupera o tema salvo antes de desenhar a página -->
+  <script>
+    // preserva também a preferência salva pela versão anterior do site
+    try {
+      const temaSalvo = localStorage.getItem('temaPassosDoImperio') || localStorage.getItem('passos-do-imperio-theme');
+      document.documentElement.dataset.tema = temaSalvo === 'escuro' || temaSalvo === 'dark' ? 'escuro' : 'claro';
+    // usa o tema claro se o navegador não permitir ler a preferência
+    } catch {
+      document.documentElement.dataset.tema = 'claro';
+    }
+  </script>
+  <!-- carrega os estilos e a lógica do percurso estático -->
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./principal.js"></script>
+</head>
+<body>
+  <!-- oferece um atalho de teclado para o conteúdo principal -->
+  <a class="atalhoConteudo" href="#conteudoPrincipal">Ir para o conteúdo</a>
+  <div class="aplicacao" id="aplicacao">
+    <!-- reúne a marca o retorno à abertura e o acesso às fontes -->
+    <header class="cabecalhoSite">
+      <div class="cabecalhoEsquerdo">
+        <button class="botaoVoltarAbertura" id="botaoVoltarAbertura" aria-label="Voltar à página inicial" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg></button>
+        <button class="marcaSite" id="botaoPaginaInicial" aria-label="Passos do Império, página inicial"><svg class="simboloMarca" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M5 23V10a4.5 4.5 0 0 1 9 0v8a4.5 4.5 0 0 0 9 0V5"/><circle cx="5" cy="23" r="2" fill="currentColor" stroke="none"/><circle cx="23" cy="5" r="2" fill="currentColor" stroke="none"/></svg><span>PASSOS DO IMPÉRIO</span></button>
+      </div>
+      <div class="cabecalhoDireito"><span class="periodoCabecalho">1822 — 1889</span><button class="botaoTexto" id="botaoFontes">Fontes e pesquisa <span aria-hidden="true">↗</span></button></div>
+    </header>
+
+    <main id="conteudoPrincipal" tabindex="-1">
+      <!-- apresenta o período histórico e os controles para iniciar a experiência -->
+      <section class="apresentacao" id="abertura" aria-labelledby="tituloAbertura">
+        <div class="textoAbertura">
+          <p class="sobretitulo"><span class="linhaFina"></span> UMA HISTÓRIA EM MOVIMENTO</p>
+          <h1 id="tituloAbertura">Brasil,<br>um <span>império.</span></h1>
+          <p class="descricaoAbertura">67 anos de disputas, resistências e transformações.<br class="apenasComputador"> Uma casa de cada vez.</p>
+          <button class="botaoIniciarPercurso" id="botaoIniciarPercurso">Percorrer a história <span class="iconeBotao" aria-hidden="true">↗</span></button>
+          <p class="instrucaoAbertura">Use as setas do teclado ou os controles na tela.</p>
+          <!-- permite alternar entre os temas claro e escuro na abertura -->
+          <button class="botaoAlternarTema" id="botaoAlternarTema" type="button" aria-pressed="false" aria-label="Ativar tema escuro">
+            <svg id="iconeLuaTema" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14A8.8 8.8 0 0 1 10 3.5 9 9 0 1 0 20.5 14Z"/></svg>
+            <svg id="iconeSolTema" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+            <span id="rotuloTema">Tema escuro</span>
+          </button>
+        </div>
+        <!-- mostra os anos que delimitam o percurso histórico -->
+        <div class="extremosAbertura" aria-hidden="true"><span><strong>1822</strong>Independência</span><span class="linhaExtremos"></span><span><strong>1889</strong>República</span></div>
+      </section>
+
+      <!-- exibe a leitura da casa atual e a navegação quando o percurso começa -->
+      <section class="percurso" id="percurso" aria-label="Percurso pelo Brasil Império" hidden>
+        <!-- mostra o ano atual a barra de progresso e os períodos históricos -->
+        <div class="cabecalhoTempo">
+          <div class="dataAtual"><span class="sobretitulo" id="rotuloPeriodo">PRIMEIRO REINADO</span><span id="anoAtual">1822</span></div>
+          <div class="areaLinhaTempo">
+            <div class="tituloLinhaTempo"><span>O tempo, em movimento</span><span id="rotuloProgresso">0% do percurso</span></div>
+            <label class="apenasLeitorTela" for="seletorAno">Escolher um ponto do percurso histórico</label>
+            <input type="range" id="seletorAno" min="0" max="1" value="0" step="1" aria-valuetext="1822">
+            <div class="navegacaoPeriodos"><button data-periodo="primeiroReinado">1822 <span>Primeiro Reinado</span></button><button data-periodo="regencias">1831 <span>Regências</span></button><button data-periodo="segundoReinado">1840 <span>Segundo Reinado</span></button><span>1889</span></div>
+          </div>
+        </div>
+        <!-- anuncia o texto da casa selecionada e permite abrir a leitura ampliada -->
+        <div class="acontecimentoAtual" id="acontecimentoAtual" aria-live="polite" aria-atomic="true">
+          <div class="informacoesAcontecimento"><span id="contadorCasas">01 / 73</span><span class="divisorAcontecimento"></span><span id="categoriaAcontecimento">FORMAÇÃO DO ESTADO</span></div>
+          <h2 id="tituloAtual" tabindex="-1">A Independência</h2>
+          <p id="resumoAtual"></p>
+          <button class="botaoLerMais" id="botaoLerMais">Explorar este acontecimento <span aria-hidden="true">↗</span></button>
+        </div>
+        <!-- reúne as instruções e os controles para mover o personagem -->
+        <div class="rodapePercurso">
+          <div class="dicaControles"><span class="teclaTeclado" aria-hidden="true">←</span><span class="teclaTeclado" aria-hidden="true">→</span><span>Avance uma casa.<br>Descubra uma história.</span></div>
+          <div class="controlesMovimento"><button id="botaoCasaAnterior" aria-label="Voltar uma casa"><span aria-hidden="true">←</span></button><span id="posicaoPercurso">01</span><button id="botaoProximaCasa" aria-label="Avançar uma casa"><span aria-hidden="true">→</span></button></div>
+          <button class="botaoTexto botaoReiniciar" id="botaoReiniciarPercurso">Voltar ao início</button>
+        </div>
+      </section>
+
+      <!-- delimita o tabuleiro animado e permite iniciar clicando no mapa -->
+      <div class="areaTabuleiro" id="areaTabuleiro" aria-label="Tabuleiro histórico" role="group">
+        <button class="botaoIniciarMapa" id="botaoIniciarMapa" aria-label="Começar a percorrer a história pelo mapa"></button>
+        <!-- separa a rotação inicial do deslocamento da câmera pelo percurso -->
+        <div class="rotacaoTabuleiro" id="rotacaoTabuleiro">
+          <div class="espacoTabuleiro" id="espacoTabuleiro">
+            <svg class="desenhoTabuleiro" id="desenhoTabuleiro" xmlns="http://www.w3.org/2000/svg" aria-label="Casas e marcos históricos do percurso">
+              <!-- define a sombra aplicada ao personagem -->
+              <defs><filter id="sombraPersonagem" x="-100%" y="-100%" width="300%" height="300%"><feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#153f31" flood-opacity=".13"/></filter></defs>
+              <!-- separa o desenho do trajeto das casas e dos marcos históricos -->
+              <g id="camadaTrajeto"></g><g id="camadaCasas"></g><g id="camadaMarcos"></g>
+              <!-- desenha o personagem figurativo que percorre as casas -->
+              <g id="personagem" aria-hidden="true"><ellipse class="sombraBoneco" cx="0" cy="8" rx="21" ry="8"/><g class="corpoBoneco"><circle cx="0" cy="-51" r="8"/><path d="M-9-36 Q0-42 9-36 L15-17 Q17-12 12-11 Q8-10 6-16 L4-24 L4-5 L8 9 Q9 14 4 15 Q0 15-1 10 L-3 1 L-5 11 Q-6 16-11 14 Q-14 13-12 8 L-8-6 L-8-24 L-13-14 Q-15-9-19-12 Q-22-14-19-19Z"/></g></g>
+            </svg>
+          </div>
+        </div>
+        <!-- suaviza as bordas visuais do tabuleiro -->
+        <div class="vinhetaTabuleiro" aria-hidden="true"></div>
+        <div class="legendaTabuleiro" id="legendaTabuleiro" aria-hidden="true"><span class="simboloLegenda"></span>CLIQUE NO MAPA PARA COMEÇAR</div>
+      </div>
+    </main>
+    <!-- informa falhas de carregamento e a necessidade de ativar o javascript -->
+    <div class="erroCarregamento" id="erroCarregamento" hidden></div>
+    <noscript><p class="avisoSemJavascript">Ative o JavaScript para percorrer o tabuleiro. O conteúdo histórico está disponível no arquivo dadosHistoricos.js do projeto.</p></noscript>
+  </div>
+
+  <!-- apresenta os artigos e suas fontes em uma janela de leitura -->
+  <dialog class="janelaLeitura" id="janelaLeitura" aria-labelledby="tituloLeitura">
+    <button class="botaoFecharLeitura" id="botaoFecharLeitura" aria-label="Fechar leitura"><span aria-hidden="true">×</span></button>
+    <div class="rolagemLeitura" id="rolagemLeitura"><div class="conteudoLeitura" id="conteudoLeitura"></div></div>
+  </dialog>
+  <!-- confirma o retorno à abertura quando a pessoa já avançou no percurso -->
+  <dialog class="janelaRetorno" id="janelaRetorno" aria-labelledby="tituloRetorno" aria-describedby="descricaoRetorno">
+    <button class="botaoFecharRetorno" id="botaoFecharRetorno" aria-label="Fechar e continuar o percurso"><span aria-hidden="true">×</span></button>
+    <p class="sobretitulo">SEU PERCURSO</p>
+    <h2 id="tituloRetorno">Voltar à página inicial?</h2>
+    <p id="descricaoRetorno">O percurso será reiniciado na primeira casa.</p>
+    <div class="acoesRetorno">
+      <button class="botaoContinuarPercurso" id="botaoContinuarPercurso">Continuar percurso</button>
+      <button class="botaoConfirmarRetorno" id="botaoConfirmarRetorno">Voltar ao início <span aria-hidden="true">↗</span></button>
+    </div>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<!-- define o ícone vetorial exibido na aba do navegador -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- desenha o fundo claro do ícone da aba -->
+  <rect width="64" height="64" fill="#fafbf9"/>
+  <!-- mantém a letra usada como símbolo do projeto -->
+  <text x="13" y="46" font-family="Georgia,serif" font-size="47" font-style="italic" fill="#184a3d">b.</text>
+</svg>
